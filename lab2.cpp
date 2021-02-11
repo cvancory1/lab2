@@ -234,6 +234,10 @@ void arrCopy(int* source , int * dest, int length){
         dest[i]= source[i];
     }
 
+    delete dest;
+    delete source;
+
+
 }
 
 
