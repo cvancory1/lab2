@@ -129,11 +129,11 @@ int main(){
     // printArray(makeArrDuplicates2,length);
 
 
-    delete arrRan1;
-    delete arrRan2;
+    // delete arrRan1;
+    // delete arrRan2;
 
-    // delete [] arrRan1;
-    // delete [] arrRan2;
+    delete [] arrRan1;
+    delete [] arrRan2;
     // delete [] arrBackward1;
     // delete [] arrBackward2;
     // delete [] arrSort1;
