@@ -74,8 +74,8 @@ int main(){
     int * arrRan1= new int [length];
     int * arrRan2= new int [length];
 
-    makeArrRandom(arrRan1,length);
-    // arrCopy(arrRan1,arrRan2,length);
+    // makeArrRandom(arrRan1,length);
+    arrCopy(arrRan1,arrRan2,length);
 
     // timeMergesort(arrRan1, start_position, length,numCompared);
     // timeQuicksort(arrRan2,start_position,length, numSwaps);
