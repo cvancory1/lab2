@@ -6,7 +6,7 @@ Lab2
 
 Goals: Quicksort, partition function and swap. Mergesort with the merge function
 
-valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes ./main look
+valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes --track-origins=yes ./main look
 
 */
 
@@ -77,67 +77,52 @@ int main(){
     makeArrRandom(arrRan1,length);
     arrCopy(arrRan1,arrRan2,length);
 
-    // timeMergesort(arrRan1, start_position, length,numCompared);
-    // timeQuicksort(arrRan2,start_position,length, numSwaps);
+    timeMergesort(arrRan1, start_position, length,numCompared);
+    timeQuicksort(arrRan2,start_position,length, numSwaps);
 
 
-    // int * arrSort1= new int [length];
-    // int * arrSort2= new int [length];
-    // makeArrSorted(arrSort1,length);
-    // arrCopy(arrSort1,arrSort2,length);
+    int * arrSort1= new int [length];
+    int * arrSort2= new int [length];
+    makeArrSorted(arrSort1,length);
+    arrCopy(arrSort1,arrSort2,length);
 
-    // timeMergesort(arrSort1, start_position, length,numCompared);
-    // timeQuicksort(arrSort2,start_position,length, numSwaps);
+    timeMergesort(arrSort1, start_position, length,numCompared);
+    timeQuicksort(arrSort2,start_position,length, numSwaps);
 
 
-    // int * arrBackward1 = new int [length];
-    // int * arrBackward2 = new int [length];
-    // makeArrBackward(arrBackward1,length );
-    // arrCopy(arrBackward1,arrBackward2,length );
+    int * arrBackward1 = new int [length];
+    int * arrBackward2 = new int [length];
+    makeArrBackward(arrBackward1,length );
+    arrCopy(arrBackward1,arrBackward2,length );
 
-    // timeMergesort(arrBackward1, start_position, length,numCompared);
-    // timeQuicksort(arrBackward2,start_position,length, numSwaps);
+    timeMergesort(arrBackward1, start_position, length,numCompared);
+    timeQuicksort(arrBackward2,start_position,length, numSwaps);
     
 
 
 
-    // int * makeArrDuplicates1= new int [length];
-    // int * makeArrDuplicates2= new int [length];
-    // makeArrSorted(makeArrDuplicates1,length);
-    // arrCopy(makeArrDuplicates1, makeArrDuplicates2,length);
+    int * makeArrDuplicates1= new int [length];
+    int * makeArrDuplicates2= new int [length];
+    makeArrSorted(makeArrDuplicates1,length);
+    arrCopy(makeArrDuplicates1, makeArrDuplicates2,length);
 
-    // timeMergesort(makeArrDuplicates1, start_position, length,numCompared);
-    // timeQuicksort(makeArrDuplicates2,start_position,length, numSwaps);
+    timeMergesort(makeArrDuplicates1, start_position, length,numCompared);
+    timeQuicksort(makeArrDuplicates2,start_position,length, numSwaps);
     
 
 
 
-
-
-    // puts("");
-    // puts("");
-    // puts("");
-    // puts("");
-
-    // printArray(arrRan1,length);
-    // printArray(arrRan2,length);
-    // printArray(arrBackward1,length);
-    // printArray(arrBackward2,length);
-    // printArray(arrSort1,length);
-    // printArray(arrSort2,length);
-    // printArray(makeArrDuplicates1,length);
-    // printArray(makeArrDuplicates2,length);
 
 
 
     delete[] arrRan1;
     delete[] arrRan2;
-    // delete [] arrBackward1;
-    // delete [] arrBackward2;
-    // delete [] arrSort1;
-    // delete [] arrSort2;
-    // delete [] makeArrDuplicates1;
-    // delete [] makeArrDuplicates2;
+    delete [] arrBackward1;
+    delete [] arrBackward2;
+    delete [] arrSort1;
+    delete [] arrSort2;
+    delete [] makeArrDuplicates1;
+    delete [] makeArrDuplicates2;
 
    }
 
